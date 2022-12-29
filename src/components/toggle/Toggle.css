@@ -1,0 +1,57 @@
+.toggle-track{
+    width: 50px;
+    height: 24px;
+    padding: 0;
+    border-radius: 30px;
+    background-color: #0f1114;
+    transition: all .2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+
+.toggle-track .imageHolder{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    font-size: 0;
+}
+
+.leftItem{
+    top: 4px;
+    left: 4px;
+}
+
+.rightItem{
+    top: 4px;
+    right: 4px;
+}
+
+
+
+.imageHolder img{
+    width: 100%;
+    height: 100%;
+}
+
+.toggle-track .disk{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 1px;
+    background: #f1f1f1;
+    border-radius: 50%;
+    transition: all .5s cubic-bezier(.23,1,.32,1) 0ms;
+}
+
+.toggle-track .disk.on{
+    right: 1px;
+}
+
+.toggle-track .disk.off{
+    right: 27px;
+}
+
+.toggle-track .disk:focus{
+    box-shadow: 0 0 2px 3px #ffa7c4;
+}

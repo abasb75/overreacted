@@ -1,0 +1,22 @@
+html{
+  font: 100%/1.75 'Merriweather','Georgia',serif;
+}
+body {
+  margin: 0;
+  color: hsla(0,0%,0%,0.9);
+  font-family: 'Merriweather','Georgia',serif;
+  font-weight: 400;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
