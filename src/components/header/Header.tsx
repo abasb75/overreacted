@@ -9,12 +9,12 @@ function Header() {
             <Route path={'/:post'} element={<h3 className='left'><Link to={'/'}>Overreacted</Link></h3>} />
         </Routes>
         
-        {window.store && <div className='right'>
+        <div className='right'>
             <Toggle 
-            onChange={window.store ? window.store.setDarkMode : ()=>{} }
+            onChange={ ()=>{} }
             isDarkMode={false}
             />
-        </div>}
+        </div>
 
     </div>);
 }

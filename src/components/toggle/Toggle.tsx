@@ -3,6 +3,7 @@ import './Toggle.css';
 import sunny from '../../assets/images/sunny.png';
 import moon from '../../assets/images/moon.png';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 interface Toggle {
     onChange?:Function;
@@ -13,14 +14,23 @@ interface Toggle {
 
 function Toggle(props:Toggle){
 
-    const [darkMode,setDarkMode] = useState(props.isDarkMode || false);
+   // const [darkMode,setDarkMode] = useState(props.isDarkMode || false);
+
+
+   const darkMode = useSelector((state:any)=>state.darkMode);
+
+   const dispatch = useDispatch();
 
     const setDarkModeOnChange = ()=>{
-        if(props.onChange){
-            props.onChange(!darkMode);
-            setDarkMode(!darkMode);
+        if(darkMode){
+            dispatch({type:'LIGHT_MODE'});
+        }else{
+            dispatch({type:'DARK_MODE'});
         }
+        
     }
+
+    
 
 
     return (<div className='toggle-track' onClick={setDarkModeOnChange}>

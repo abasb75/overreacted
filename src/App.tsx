@@ -6,17 +6,18 @@ import './assets/fonts/style.css';
 
 import Posts from './components/posts-list/Posts';
 import Post from './components/post-single/Post';
+import { useSelector } from 'react-redux';
 
 
 
 function App() {
-  const [darkMode,setDarkMode]  = useState(false);
 
-  window.store.setDarkMode = setDarkMode;
+  const darkMode = useSelector((state:any)=>state.darkMode);
+
+  console.log(darkMode);
   
   useEffect(()=>{
     document.title = 'Overreacted — A blog by Dan Abramov';
-     
   },[]);
   
   const getDarkModeClassName = () => {
