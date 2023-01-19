@@ -1,4 +1,4 @@
-import { createStore } from "redux";
+import { createStore,Store } from "redux";
 import reducer from "./reducer";
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
 
 console.log(initialState)
 
-const store = createStore(reducer,initialState);
+const store:Store = createStore(reducer,initialState);
 
 
 export {initialState};
