@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/Header';
@@ -13,8 +13,6 @@ import { useSelector } from 'react-redux';
 function App() {
 
   const darkMode = useSelector((state:any)=>state.darkMode);
-
-  console.log(darkMode);
   
   useEffect(()=>{
     document.title = 'Overreacted — A blog by Dan Abramov';
